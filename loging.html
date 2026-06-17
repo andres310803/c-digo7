@@ -6,40 +6,72 @@
 
     <style>
         body{
-            font-family: Arial, sans-serif;
-            background:#e3f2fd;
-            display:flex;
-            justify-content:center;
-            align-items:center;
-            height:100vh;
-        }
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: linear-gradient(135deg, #e3f2fd, #5a6269);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+    margin:0;
+}
 
-        .login{
-            background:white;
-            padding:30px;
-            border-radius:10px;
-            box-shadow:0 0 10px rgba(0,0,0,0.2);
-            text-align:center;
-        }
+/* Contenedor */
+.login{
+    background:white;
+    padding:35px 30px;
+    border-radius:15px;
+    box-shadow:0 10px 25px rgba(0,0,0,0.15);
+    text-align:center;
+    width:280px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
 
-        input{
-            width:220px;
-            padding:10px;
-            margin:8px 0;
-        }
+.login:hover{
+    transform: translateY(-5px);
+    box-shadow:0 15px 35px rgba(0,0,0,0.2);
+}
 
-        button{
-            width:100%;
-            padding:10px;
-            background:#1976d2;
-            color:white;
-            border:none;
-            cursor:pointer;
-        }
+/* Inputs */
+input{
+    width:100%;
+    padding:12px;
+    margin:10px 0;
+    border-radius:8px;
+    border:1px solid #ccc;
+    outline:none;
+    font-size:14px;
+    transition: border 0.3s, box-shadow 0.3s;
+}
 
-        button:hover{
-            background:#1565c0;
-        }
+input:focus{
+    border-color:#818488;
+    box-shadow:0 0 5px rgba(25,118,210,0.5);
+}
+
+/* Botón */
+button{
+    width:100%;
+    padding:12px;
+    margin-top:10px;
+    background: linear-gradient(135deg, #1976d2, #e44bcd);
+    color:white;
+    border:none;
+    border-radius:8px;
+    font-size:15px;
+    font-weight:bold;
+    cursor:pointer;
+    transition: all 0.3s ease;
+}
+
+button:hover{
+    background: linear-gradient(135deg, #1565c0, #6c7074);
+    transform: scale(1.05);
+}
+
+button:active{
+    transform: scale(0.98);
+    background: linear-gradient(135deg, #0d47a1, #1a237e);
+}
     </style>
 </head>
 <body>
@@ -54,6 +86,7 @@
     <button onclick="login()">Entrar</button>
 
     <p id="mensaje"></p>
+    <a href="https://slidesdocs.com/es/fondos-presentaciones/medicamento-pastillas" target="_blank">¿Olvidaste tu contraseña?</a>
 </div>
 
 <script>
