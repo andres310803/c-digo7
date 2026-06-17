@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Login Simple</title>
+
+    <style>
+        body{
+            font-family: Arial, sans-serif;
+            background:#e3f2fd;
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            height:100vh;
+        }
+
+        .login{
+            background:white;
+            padding:30px;
+            border-radius:10px;
+            box-shadow:0 0 10px rgba(0,0,0,0.2);
+            text-align:center;
+        }
+
+        input{
+            width:220px;
+            padding:10px;
+            margin:8px 0;
+        }
+
+        button{
+            width:100%;
+            padding:10px;
+            background:#1976d2;
+            color:white;
+            border:none;
+            cursor:pointer;
+        }
+
+        button:hover{
+            background:#1565c0;
+        }
+    </style>
+</head>
+<body>
+
+<div class="login">
+    <h2>Iniciar Sesión</h2>
+
+    <input type="text" id="usuario" placeholder="Usuario"><br>
+
+    <input type="password" id="clave" placeholder="Contraseña"><br>
+
+    <button onclick="login()">Entrar</button>
+
+    <p id="mensaje"></p>
+</div>
+
+<script>
+function login() {
+
+    let usuario = document.getElementById("usuario").value;
+    let clave = document.getElementById("clave").value;
+
+    if(usuario === "admin" && clave === "1234"){
+        document.getElementById("mensaje").innerHTML =
+        "✅ Bienvenido " + usuario;
+    }else{
+        document.getElementById("mensaje").innerHTML =
+        "❌ Usuario o contraseña incorrectos";
+    }
+
+}
+</script>
+
+</body>
+</html>
